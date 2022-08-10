@@ -17,29 +17,29 @@
     <header class="page-header">
       <div class="container header-container">
         <nav class="nav">
-          <a href="./index.html" class="link header-logo logo" lang="en"><span class="accent">Web</span>Studio</a>
+          <a href="./index.html" class="link header-logo logo header-link" lang="en"><span class="accent">Web</span>Studio</a>
           <ul class="list nav-list">
             <li class="nav-item">
-              <a href="./index.html" class="link nav-link current">Студия5</a>
+              <a href="./index.html" class="link nav-link header-link current">Студия</a>
             </li>
             <li class="nav-item">
-              <a href="./portfolio.html" class="link nav-link">Портфолио</a>
+              <a href="./portfolio.html" class="link nav-link header-link">Портфолио</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="link nav-link">Контакты</a>
+              <a href="#" class="link nav-link header-link">Контакты</a>
             </li>
           </ul>
         </nav>
         <ul class="list nav-address">
           <li class="address-item">
-            <a href="mailto:info@devstudio.com" class="link header-contacts">
+            <a href="mailto:info@devstudio.com" class="link header-contacts header-link">
               <svg class="header-icon" width="16" height="12">
                 <use href="./images/sprite.svg#envelope"></use></svg
               >nfo@devstudio.com</a
             >
           </li>
           <li class="address-item">
-            <a href="tel:+380961111111" class="link header-contacts"
+            <a href="tel:+380961111111" class="link header-contacts header-link"
               ><svg class="header-icon" width="10" height="16">
                 <use href="./images/sprite.svg#smartphone"></use></svg
               >+38 096 111 11 11</a
@@ -54,7 +54,15 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="button hero-button">Заказать услугу</button>
+          <button type="button" class="button hero-button" data-modal-open>
+            <svg class="hero-icon" width="20" height="25">
+              <use href="./images/sprite.svg#file"></use>
+            </svg>
+            <svg class="hero-icon-second" width="20" height="25">
+              <use href="./images/sprite.svg#fileadd"></use>
+            </svg>
+            Заказать услугу
+          </button>
         </div>
       </section>
 
@@ -108,14 +116,23 @@
         <div class="container">
           <h2 class="title section-title">Чем мы занимаемся</h2>
           <ul class="list section-list">
-            <li class="branches-item item">
+            <li class="branches-item item iitem">
               <img src="./images/desktop.jpg" alt="Десктопные приложения" width="370" height="294" />
+              <div class="text-inner">
+                <p class="brunches-text">Десктопные приложения</p>
+              </div>
             </li>
             <li class="branches-item item">
               <img src="./images/mobile.jpg" alt="Мобильные приложения" width="370" height="294" />
+              <div class="text-inner">
+                <p class="brunches-text">Мобильные приложения</p>
+              </div>
             </li>
             <li class="branches-item item">
               <img src="./images/design.jpg" alt="Дизайнерские решения" width="370" height="294" />
+              <div class="text-inner">
+                <p class="brunches-text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -281,7 +298,7 @@
     </main>
 
     <!-- Постоянные клиенты -->
-    <section class="advant section">
+    <section class="section">
       <div class="container">
         <h2 class="title section-title">Постоянные клиенты</h2>
         <ul class="client-list list">
@@ -334,17 +351,17 @@
     <footer class="footer">
       <div class="container footer-container">
         <div>
-          <a href="./index.html" class="logo footer-logo link" lang="en"> <span class="accent">Web</span>Studio</a>
+          <a href="./index.html" class="logo footer-logo link footer-link" lang="en"> <span class="accent">Web</span>Studio</a>
           <address class="address">
             <ul class="list footer-list">
               <li class="footer-item">
-                <a href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26,+Киев,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=ru" class="footer-address link"> г. Киев, пр-т Леси Украинки, 26 </a>
+                <a href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26,+Киев,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=ru" class="footer-address link footer-link"> г. Киев, пр-т Леси Украинки, 26 </a>
               </li>
               <li class="footer-item">
-                <a href="mailto:info@devstudio.com" class="footer-contacts link">info@devstudio.com</a>
+                <a href="mailto:info@devstudio.com" class="footer-contacts link footer-link">info@devstudio.com</a>
               </li>
               <li class="footer-item">
-                <a href="tel:+380961111111" class="footer-contacts link">+38 096 111 11 11</a>
+                <a href="tel:+380961111111" class="footer-contacts link footer-link">+38 096 111 11 11</a>
               </li>
             </ul>
           </address>
@@ -384,5 +401,19 @@
         </div>
       </div>
     </footer>
+
+    <!-- *Модальное окно -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-wrapper">
+        <button type="button" class="modal-button" data-modal-close>
+          <svg class="icon-modal" width="18px" height="18px">
+            <use href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- *Подклюние js -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

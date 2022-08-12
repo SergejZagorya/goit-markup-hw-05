@@ -97,6 +97,7 @@ body {
   color: var(--accent-color);
 }
 
+/* ссылки в header  */
 .header-link{
 transition: color 250ms var(--timing-function);}
 
